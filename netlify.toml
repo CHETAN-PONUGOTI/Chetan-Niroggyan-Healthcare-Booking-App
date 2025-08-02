@@ -1,7 +1,12 @@
 [build]
   command = "npm run build"
   publish = "build"
-  functions = "netlify/functions/" # Tells Netlify where your functions are
+
+[functions]
+  # This tells Netlify where your functions are
+  directory = "netlify/functions/"
+  # This tells Netlify to include your data file
+  included_files = ["db.json"]
 
 # Rule for your API requests
 [[redirects]]
